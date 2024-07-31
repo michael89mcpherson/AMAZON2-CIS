@@ -351,10 +351,7 @@ amazon2cis_xwindows_required: false
 amazon2cis_time_synchronization: chrony
 
 amazon2cis_time_synchronization_servers:
-    - 0.pool.ntp.org
-    - 1.pool.ntp.org
-    - 2.pool.ntp.org
-    - 3.pool.ntp.org
+    - time.nist.gov/
 
 amazon2cis_chrony_server_options: "minpoll 8"
 amazon2cis_ntp_server_options: "iburst"
