@@ -1,5 +1,5 @@
 ---
-- hosts: All
+- hosts: 127.0.0.1
   become: true
 
   name: Run the ansible-lockdown remediation role
