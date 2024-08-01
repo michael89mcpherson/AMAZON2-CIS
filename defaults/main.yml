@@ -27,7 +27,7 @@ amazon2cis_tmp_svc: true
 ### Goss Audit run settings
 # Goss audit configuration settings at bottom of file
 
-setup_audit: false
+setup_audit: true
 # How to retrive goss
 # Options are copy or download - detailed settings at the bottom of this file
 # you will need to access to either github or the file already dowmloaded
@@ -41,7 +41,7 @@ audit_content: git
 audit_cmd_timeout: 30000
 
 # enable audits to run - this  runs the audit and get the latest content
-run_audit: false
+run_audit: true
 ### End Goss enablements ####
 
 # Change to false if using EFI boot changes 1.1.1.4 to stop vfat
@@ -453,7 +453,7 @@ amazon2_max_auth_tries: 4
 # Timeout value is in seconds. (60 seconds * 10 = 600)
 amazon2cis_shell_session_timeout:
     file: /etc/profile.d/tmout.sh
-    timeout: 600
+    timeout: 300
 # 5.4.1.5 Allow ansible to expire password for account with a last changed date in the future. False will just display users in violation, true will expire those users passwords
 amazon2cis_futurepwchgdate_autofix: true
 
@@ -495,7 +495,7 @@ goss_url: "https://github.com/goss-org/goss/releases/download/{{ goss_version.re
 ## if get_goss_file - copy the following needs to be updated for your environment
 ## it is expected that it will be copied from somewhere accessible to the control node
 ## e.g copy from ansible control node to remote host
-copy_goss_from_path: /some/accessible/path
+# copy_goss_from_path: /some/accessible/path
 
 ### Goss Audit Benchmark file ###
 ## managed by the control audit_content
